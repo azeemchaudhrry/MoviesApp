@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MovieCollectionCell" id="cZE-iV-UFb" customClass="MovieCollectionCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="230"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="230"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="150">
+                        <rect key="frame" x="12" y="171" width="294" height="27"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="27" id="ApE-FH-7qx"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample" translatesAutoresizingMaskIntoConstraints="NO" id="NFY-Fg-dWt" customClass="MvxCachedImageView">
+                        <rect key="frame" x="8" y="8" width="304" height="160"/>
+                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="329">
+                        <rect key="frame" x="12" y="204" width="15" height="15"/>
+                        <color key="tintColor" red="0.87058823529999996" green="0.22352941179999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="15" id="369"/>
+                            <constraint firstAttribute="height" constant="15" id="370"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="330">
+                        <rect key="frame" x="31" y="205" width="31" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.87058823529999996" green="0.22352941179999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="433">
+                        <rect key="frame" x="276" y="205" width="31" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.53333333329999999" green="0.53333333329999999" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="favorite-gray" translatesAutoresizingMaskIntoConstraints="NO" id="96h-TO-MDq">
+                        <rect key="frame" x="274" y="15" width="25" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="25" id="DuF-7P-aT0"/>
+                            <constraint firstAttribute="height" constant="25" id="LVG-mj-m9D"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jtD-Oz-8Vm">
+                        <rect key="frame" x="272" y="13" width="29" height="29"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="29" id="UQ1-8b-4cd"/>
+                            <constraint firstAttribute="height" constant="29" id="YC8-kQ-v3F"/>
+                        </constraints>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <inset key="contentEdgeInsets" minX="2" minY="2" maxX="2" maxY="2"/>
+                        <connections>
+                            <action selector="favButtonTapped:" destination="cZE-iV-UFb" eventType="touchUpInside" id="Iel-pm-7TI"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="329" firstAttribute="top" secondItem="150" secondAttribute="bottom" constant="6" id="371"/>
+                <constraint firstItem="330" firstAttribute="leading" secondItem="329" secondAttribute="trailing" constant="4" id="431"/>
+                <constraint firstAttribute="bottom" secondItem="329" secondAttribute="bottom" constant="11" id="1rv-ab-lcs"/>
+                <constraint firstItem="329" firstAttribute="leading" secondItem="150" secondAttribute="leading" id="5rE-kJ-SQD"/>
+                <constraint firstItem="jtD-Oz-8Vm" firstAttribute="centerY" secondItem="96h-TO-MDq" secondAttribute="centerY" id="66k-3B-bWf"/>
+                <constraint firstItem="jtD-Oz-8Vm" firstAttribute="top" secondItem="NFY-Fg-dWt" secondAttribute="top" constant="5" id="ImI-Rs-JXc"/>
+                <constraint firstItem="150" firstAttribute="top" secondItem="NFY-Fg-dWt" secondAttribute="bottom" constant="3" id="M8x-Cl-0Ur"/>
+                <constraint firstItem="NFY-Fg-dWt" firstAttribute="top" secondItem="cZE-iV-UFb" secondAttribute="top" constant="8" id="Obn-id-rdT"/>
+                <constraint firstItem="NFY-Fg-dWt" firstAttribute="leading" secondItem="cZE-iV-UFb" secondAttribute="leading" constant="8" id="ckJ-qO-oL8"/>
+                <constraint firstItem="150" firstAttribute="trailing" secondItem="NFY-Fg-dWt" secondAttribute="trailing" constant="-6" id="dkI-Jh-Tbc"/>
+                <constraint firstAttribute="trailing" secondItem="NFY-Fg-dWt" secondAttribute="trailing" constant="8" id="gnY-Fc-70Y"/>
+                <constraint firstItem="jtD-Oz-8Vm" firstAttribute="trailing" secondItem="NFY-Fg-dWt" secondAttribute="trailing" constant="-11" id="iMm-9c-e9s"/>
+                <constraint firstItem="330" firstAttribute="centerY" secondItem="329" secondAttribute="centerY" constant="0.75" id="iU6-GI-ozK"/>
+                <constraint firstItem="jtD-Oz-8Vm" firstAttribute="centerX" secondItem="96h-TO-MDq" secondAttribute="centerX" id="ig2-1K-qWk"/>
+                <constraint firstItem="150" firstAttribute="leading" secondItem="NFY-Fg-dWt" secondAttribute="leading" constant="4" id="lA3-ir-niO"/>
+                <constraint firstItem="433" firstAttribute="trailing" secondItem="NFY-Fg-dWt" secondAttribute="trailing" constant="-5" id="qfd-er-zAr"/>
+                <constraint firstItem="433" firstAttribute="centerY" secondItem="330" secondAttribute="centerY" id="qjV-u9-ZXP"/>
+            </constraints>
+            <size key="customSize" width="144" height="200"/>
+            <connections>
+                <outlet property="favoriteImageView" destination="96h-TO-MDq" id="iqW-3d-YXr"/>
+                <outlet property="posterImageView" destination="NFY-Fg-dWt" id="xM7-EK-ZXn"/>
+                <outlet property="ratingLabel" destination="330" id="name-outlet-330"/>
+                <outlet property="starImageView" destination="329" id="name-outlet-329"/>
+                <outlet property="titleLabel" destination="150" id="name-outlet-150"/>
+                <outlet property="yearLabel" destination="433" id="name-outlet-433"/>
+            </connections>
+            <point key="canvasLocation" x="88.405797101449281" y="105.13392857142857"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="favorite-gray" width="25" height="25"/>
+        <image name="sample" width="16" height="16"/>
+        <image name="star" width="29" height="29"/>
+    </resources>
+</document>

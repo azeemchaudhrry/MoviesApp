@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:MvxBind="Visibility Visibility(IsLoading)"/>
+    <MvvmCross.Droid.Support.V4.MvxSwipeRefreshLayout
+        android:id="@+id/movies_swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:MvxBind="Visibility InvertedVisibility(IsLoading)">
+        <MvvmCross.Droid.Support.V7.RecyclerView.MvxRecyclerView
+            android:id="@+id/movies_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:MvxItemTemplate="@layout/discover_grid_item"
+            app:MvxBind="ItemsSource ItemsSource"/>
+    </MvvmCross.Droid.Support.V4.MvxSwipeRefreshLayout>
+</RelativeLayout>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/background_material_light"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        layout="@layout/toolbar"/>
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/title_textInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/title_textInputEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/textinputedittext_background"
+                    android:lines="1"
+                    app:MvxBind="Text Title"
+                    android:hint="@string/movie_review_title" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/review_textInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/review_textInputEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Comments"
+                    android:background="@drawable/textinputedittext_background"
+                    app:MvxBind="Text Review" />
+
+            </android.support.design.widget.TextInputLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:gravity="left"
+                    android:layout_height="wrap_content">
+                    <MovieApp.Droid.Extensions.TextViewExt.FuturaTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rate"
+                        android:textColor="@color/textColorDark"/>
+                    <MovieApp.Droid.Extensions.TextViewExt.FuturaTextView
+                        android:id="@+id/rating_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:layout_marginLeft="12dp"
+                        android:textColor="@color/orange"/>
+                    <MovieApp.Droid.Extensions.TextViewExt.FuturaTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" / 10"
+                        android:textColor="@color/textColorLight"/>
+                </LinearLayout>
+                <RatingBar
+                    android:id="@+id/review_ratingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:numStars="5"
+                    android:stepSize="0.5"
+                    android:progressTint="@color/orange"
+                    style="@style/Widget.AppCompat.RatingBar"/>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <MovieApp.Droid.Extensions.TextViewExt.FuturaTextView
+                    android:id="@+id/add_memory_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/textColorDark"
+                    android:text="@string/movie_review_attachment"
+                    android:textAllCaps="false"/>
+                <android.support.v7.widget.CardView
+                    android:layout_width="100dp"
+                    android:layout_height="110dp"
+                    app:cardBackgroundColor="@color/material_grey_300"
+                    app:cardCornerRadius="8dp"
+                    android:layout_marginTop="8dp"
+                    android:elevation="0dp">
+                    <ImageView
+                        android:id="@+id/memory_imageView"
+                        android:src="@drawable/ic_camera"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+            <Button
+                android:id="@+id/save_button"
+                android:layout_width="wrap_content"
+                android:minWidth="150dp"
+                android:layout_marginTop="30dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@android:color/white"
+                android:background="@drawable/rounded_button"
+                android:textAllCaps="true"
+                android:text="Save Review"/>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

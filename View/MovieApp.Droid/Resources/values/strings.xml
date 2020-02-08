@@ -1,0 +1,20 @@
+<resources>
+  <string name="app_name">Movies</string>
+  <string name="action_settings">Settings</string>
+
+  <!-- movie details layout -->
+  <string name="movie_details_synopsis">Synopsis</string>
+  <string name="movie_details_review">Reviews</string>
+
+  <!-- movie review section -->
+  <string name="movie_review_add_review">Add Review</string>
+  <string name="movie_review_title">Title</string>
+  <string name="movie_review_review">Review</string>
+  <string name="movie_review_rating">Rate</string>
+  <string name="movie_review_attachment">Upload Memory</string>
+  <string name="movie_review_save">Save</string>
+  <string name="movie_review_cancel">Cancel</string>
+
+  <!-- Id for Tags -->
+  <item type ="id" name ="favorite_item_tag_key"/>
+</resources>

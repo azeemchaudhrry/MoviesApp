@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MvvmCross.Droid.Support.V7.RecyclerView.MvxRecyclerView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/movies_recyclerView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    app:MvxItemTemplate="@layout/discover_list_item"
+    app:MvxBind="ItemsSource ItemsSource; ItemClick ItemSelectedCommand"/>
