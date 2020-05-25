@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8" ?> 
-<resources>
-  <dimen name="tablayout_start_padding">8dp</dimen>
-
-  <dimen name="text_large">18sp</dimen>
-</resources>
